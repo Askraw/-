@@ -1,0 +1,94 @@
+{% extends "bootstrap/base.html"  %}
+<!-- 新 Bootstrap4 核心 CSS 文件 -->
+<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+ 
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+ 
+<!-- popper.min.js 用于弹窗、提示、下拉菜单 -->
+<script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+ 
+<!-- 最新的 Bootstrap4 核心 JavaScript 文件 -->
+<script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+<!-- <script type="text/javascript"> -->
+
+<!-- $(function(){ -->
+    <!-- $(".close").click(function(){ -->
+        <!-- $("#myAlert").alert('close'); -->
+        <!-- $("#myAlert2").alert('close'); -->
+    <!-- }); -->
+<!-- }); -->
+<!-- function alertMes(){ -->
+ <!-- if(document.getElementById()) document.getElementById('myAlert').setAttribute("hidden",false); -->
+<!-- } -->
+<!-- </script> -->
+{% block title %}Flask{% endblock %}
+{% block navbar %}
+<div class="navbar navbar-inverse" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">同义词在线编辑</a>
+        </div>
+        <div class="navbar-collapse collapse">
+        
+            <ul class="nav navbar-nav">
+                <li><a href="/">InheTech</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container" style="width:100%;margin:0 auto;">
+<div class="col-md-3" style="background-color:#FFFFFF"></div><!-- left-->
+
+<div class="col-md-6" style="background-color:#FFFFFF">
+        <div style="width:100%;margin:0 auto;">
+                <form action="searchItem" method="post">
+<div style="float:left;width:100%;margin:0 auto;margin-top: 25%;">
+
+<div class="input-group" style="width:100%;margin:0 auto;"> 
+            
+            <input type="text" class="input-block-level h1 plain-field" style="width:100%;margin:0 auto;"name="search" placeholder="发热" >
+            
+<!-- <div id="myAlert2" class="alert alert-warning" hidden> -->
+    <!-- <a href="#" class="close" data-dismiss="alert">&times;</a> -->
+    <!-- <strong>警告！</strong>您的网络连接有问题。 -->
+<!-- </div> -->
+        </div></div>
+        
+        <div style="float:left;width:100%;margin:0 auto;margin-top: 2%;">
+         <div class="input-group" style="width:100%;margin:0 auto;float:left;">
+                <span class="input-group-btn" >
+                        <button class="btn btn-default btn-lg" type="submit" style="margin-left:40%;margin-right:5%;border-top-right-radius: 5px; 
+border-top-left-radius: 5px; 
+border-bottom-right-radius:5px;
+border-bottom-left-radius:5px;"><i class="glyphicon glyphicon-search"></i>&nbsp;搜索词条&nbsp;</button>
+                    </span>
+                    <!-- <span class="input-group-btn" > -->
+                   <!-- <a href="addItem"><button class="btn btn-default btn-lg" type="button" style="margin-left:5%;margin-right:40%;"><i class="glyphicon glyphicon-plus"></i>&nbsp;添加新词条</button></a> -->
+                    <!-- </span> -->
+                </div><!-- /input-group --></div>
+
+                <!-- <div class="input-group"> -->
+            <!-- <span class="input-group-btn"> -->
+                        <!-- <button class="btn btn-default" type="button" onclick="/">返回首页</button> -->
+                    <!-- </span> -->
+            
+            
+        <!-- </div> --></form> 
+        
+</div></div>
+        <!-- <div class="col-md-8" style="background-color:#FFFFFF">
+        {% block page_content %}{% endblock %}
+        </div> -->
+  <div class="col-md-3" style="background-color:#FFFFFF"></div><!-- right-->
+</div>
+{% endblock %}

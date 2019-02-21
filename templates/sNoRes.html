@@ -1,0 +1,45 @@
+ <script type="text/javascript"> 
+
+$(function(){ 
+     $(".close").click(function(){ 
+         $("#myAlert").alert('close');
+        $("#myAlert2").alert('close'); 
+     }); 
+}); 
+<!-- function alertMes(){ -->
+ <!-- if(document.getElementById()) document.getElementById('myAlert').setAttribute("hidden",false); -->
+<!-- } -->
+</script>
+{% extends "base3.html" %}
+
+{% block title %}首页{% endblock %}
+
+{% block page_content %}
+    <div class="container" style="margin:0px;;margin:0 auto;">
+
+
+<div class="col-md-12" style="background-color:#FFFFFF;margin:0 auto;">
+        <div style="width:100%;margin:0 auto;">
+            <div id="myAlert" class="alert alert-warning" >
+    <a href="#" class="close" data-dismiss="alert">&times;</a>
+    <strong>没找到该词！</strong>可以在下方输入框添加新词
+</div>
+        <form action="/addItem/detail" method="post">
+<div style="float:left;width:100%;margin:0 auto;margin-top: 1%;">
+
+<div class="input-group" style="width:100%;margin:0 auto;float:left"> 
+            
+           <div> <input type="text" class="input-block-level h1 plain-field" style="width:100%;" name="words" placeholder="每个词之间用空格分开，例如：阿兹海默症 老年痴呆">
+            </div>
+                 <div>       <button class="btn btn-default btn-lg" type="submit"><i class="glyphicon glyphicon-plus"></i>&nbsp;添加</button>
+                   </div> 
+        </div></div></form>
+   
+                
+                
+        </div>
+  
+</div>
+
+
+{% endblock %}

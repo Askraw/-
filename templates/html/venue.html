@@ -1,0 +1,267 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Venue-iCOMET</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/popper.js/1.12.5/umd/popper.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/basic.css">
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js">	
+<script type="text/javascript" src="js/home.js">	</script>
+	<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+     .navbar-brand{margin-left:50px;border: 1px solid #fff;width: 100px;height: 40px;text-align: center;}
+    ul{margin-left:50px;}
+    ul li a{margin-right: 40px;color: #fff !important;}
+    .navbar-toggler-icon{color:#fff !important;}
+    .navbar-dark .navbar-toggler{border-color: white !important;}
+    .nav_fix_pos {
+            position:fixed;top:0px;left:0px;width:100%;
+            background: blue;z-index:999;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            var nav=$("#navtop"); //得到导航对象
+            var win=$(window); //得到窗口对象
+            var sc=$(document);//得到document文档对象。
+            var navHeight = nav.offset().top;            
+            win.scroll(function(){                            
+              if(sc.scrollTop() >= navHeight){                                    
+                    nav.addClass("nav_fix_pos");
+              }else{
+                    nav.removeClass("nav_fix_pos");                    
+              };
+            });
+        });
+    </script>
+</head>
+<body >
+
+<div class="container-fluid" style="background-color:#FFFFFF;padding-left:0px;padding-right:0px;">
+<!-- banner-->
+	<div class="row-fluid" >
+	<div class="col-md-12" style="padding-left:0px;padding-right:0px;" ><div id="myCarousel" class="carousel slide" data-ride="carousel">
+	<!-- 轮播（Carousel）指标 -->
+	<ol class="carousel-indicators">
+		<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+		<li data-target="#myCarousel" data-slide-to="1"></li>
+		<li data-target="#myCarousel" data-slide-to="2"></li>
+	</ol>   
+	<!-- 轮播（Carousel）项目 -->
+	<div class="carousel-inner" >
+		<div class="item active" >
+			<img src="../pics/slide1.png" alt="First slide"  class="img-responsive center-block">
+			<div class="carousel-caption">标题 1</div>
+		</div>
+		<div class="item">
+			<img src="../pics/slide2.png" alt="Second slide" class="img-responsive center-block">
+			<div class="carousel-caption">标题 2</div>
+		</div>
+		<div class="item">
+			<img src="../pics/slide3.png" alt="Third slide" class="img-responsive center-block">
+			<div class="carousel-caption">标题 3</div>
+		</div>
+	</div>
+	<!-- 轮播（Carousel）导航 -->
+	<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+	    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+	    <span class="sr-only">Previous</span>
+	</a>
+	<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+	    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+	    <span class="sr-only">Next</span>
+	</a>
+</div> </div>
+	</div>
+    <!-- navigation-->
+		<div class="row-fluid">
+		<div class="col-md-12"   style="padding-left:0px;padding-right:0px;margin-bottom:30px;"><!-- 导航栏 -->
+	<nav class="navbar navbar-expand-md navbar-dark " id="navtop"style="padding-left:0px;padding-right:0px;padding-top:0px;padding-bottom:0px;text-align: center;background-color:#F5F5F5;">
+		
+		<button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#collapsibleNavbar" style="background-color:#00868B" >
+            <!-- 方框里面三条线 -->
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="collapsibleNavbar"style="text-align: center;background-color:#F5F5F5;">
+			<ul class="navbar-nav" style="display: inline-block;float: none;" style="text-align: center;background-color:#F5F5F5;">
+				<li class="active nav-item">
+					<a class="nav-link" href="../home.html"><div class="text-primary"><b><font face="verdana"color="black" >HOME</font></b></div></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="about.html"><div class="text-primary"><b><font face="verdana" color="black" >ABOUT</font></b></div></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="venue.html"><div class="text-primary"><b><font face="verdana" >VENUE</font></b></div></a>
+				</li>
+				<li class="nav-item">
+				    <a class="nav-link" href="invited.html"><div class="text-primary"><b><font face="verdana" color="black">INVITED SPEAKERS</font></b></div></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="programs.html"><div class="text-primary"><b><font face="verdana" color="black">PROGRAMS</font></b></div></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="abstract.html"><div class="text-primary"><b><font face="verdana"color="black">ABSTARCT</font></b></div></a>
+				</li>        
+				<li class="nav-item">
+				    <a class="nav-link" href="rigistration.html"><div class="text-primary"><b><font face="verdana"color="black" >RIGISTRATION</font></b></div></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="accommodation.html"><div class="text-primary"><b><font face="verdana"color="black">ACCOMMDATION</font></b></div></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="committees.html"><div class="text-primary"><b><font face="verdana"color="black">COMMITTEES</font></b></div></a>
+				</li> 
+<li class="nav-item">
+					<a class="nav-link" href="contact.html"><div class="text-primary"><b><font face="verdana"color="black">CONTACT</font></b></div></a>
+				</li>                        
+			</ul>
+  </div>  
+
+</nav></div></div>
+<!-- content -->
+
+		<div class="row-fluid" style="background-color:#FFFFFF">
+		<div class="col-md-1" style="background-color:#FFFFFF"></div>
+		<div class="col-md-6"  style="background-color:#FFFFFF">
+		<h3 style="color:#00868B;">
+			Venue
+			</h3>
+			<div class="col-md-12" style="background-color:#FFFFFF;margin-bottom:15px;margin-top:15px;" >
+			<p class="p1">
+				The iCOMET 2019 will be held at Wanda Realm in Hefei, China. Wanda Realm Hefei is a luxury resort with Hui style architectures. The hotel is located in Hefei Wanda Cultural Tourism City on the Chao Lakeside, next to the Wanda Theme park, Wanda Water Park, Wanda Movie Park, Wanda Mall and Bar Street. It includes fine dining, ballroom, comfortable guestrooms and pool & fitness facilities.
+
+			</p>
+		</div>
+		<h3 style="color:#00868B;">
+			Hefei
+			</h3>
+			<div class="col-md-12" style="background-color:#FFFFFF;margin-bottom:15px;margin-top:15px;" >
+			<p class="p1">
+				Hefei is the capital city of Anhui Province in eastern China. It is an important transportation hub in the area and the famous Mt. Huang (Yellow Mountains) is 300 kilometers away which can be reached conveniently. The beautiful Chao Lake, as the fifth largest freshwater lake of China lies in the southeastern of the city. Hefei is also known as a scientific and educational city where the University of Science and Technology of China (USTC) and the branches of the Chinese Academy of Sciences locate.
+
+
+			</p>
+		</div>
+		<h3 style="color:#00868B;">
+			Travel
+			</h3>
+			<div class="col-md-12" style="background-color:#FFFFFF;margin-bottom:15px;margin-top:15px;" >
+			<p class="p1">
+				Situated in the central-east of the country, Hefei is easily reached by plane or by train.
+				</p><p class="p1">
+<b>By plane:</b> Hefei Xinqiao International Airport (HFE) is the main airport which connects to most of major cities in China.
+</p><p class="p1">
+<b>By train:</b> Hefei has two major railway stations, Hefei Station and Hefei South Station. It takes only two hours to get to Shanghai by high-speed train and three hours to get to Beijing.
+ </p><p class="p1">
+
+The hotel is 53km from Hefei Xinqiao International Airport and 17 km from the Hefei South Station. You can get to the hotel by bus or taxi.
+</p><p class="p1">
+Xinqiao International Airport → Wanda Realm Hefei: (About 53 km)
+Bus: Xinqiao Airport – airport - railway station express –Hefei South Station -- Metro Line 1 – Wanda City (Gate A) — walk 1300 meters -- hotel
+Taxi: Approximate 120 CNY
+</p><p class="p1">
+Hefei South Station → Wanda Realm Hefei: (About 17 km)
+</p><p class="p1">
+<b>Bus:</b> Hefei South Station -- Metro Line 1 – Wanda City (Gate A) — walk 1300 meters -- hotel
+</p><p class="p1">
+<b>Taxi:</b> Approximate 30 CNY
+
+
+			</p>
+		</div>
+	
+		</div>
+		
+		<div class="col-md-4" style="background-color:#F5F5F5;padding-left:0px;padding-right:0px;" >
+		<div class="col-md-12" style="background-color:#00868B;" >
+		<h2 style="font-family: Impact, Arial;color:#FFFFFF;padding-top:20px;">
+			Documents download
+			</h2>
+		
+		</div>
+		<div class="col-md-12" style="background-color:#F5F5F5;margin-bottom:15px;margin-top:15px;" >
+			<p >
+				documents links
+			</p>
+		</div>
+		<div class="col-md-12" style="background-color:#00868B;" >
+		<h2 style="font-family: Impact, Arial;color:#FFFFFF;padding-top:20px;">
+			Quick links
+			</h2>
+		</div>
+		<div class="col-md-12" style="background-color:#F5F5F5;margin-bottom:15px;margin-top:15px;" >
+			<p >
+				quick links
+			</p>
+		</div>
+		<div class="col-md-12" style="background-color:#00868B;" >
+		<h2 style="font-family: Impact, Arial;color:#FFFFFF;padding-top:20px;">
+			News
+			</h2>
+		</div>
+		<div class="col-md-12" style="background-color:#F5F5F5;margin-bottom:15px;margin-top:15px;" >
+			<p >
+				news
+			</p>
+		</div>
+		<div class="col-md-12" style="background-color:#00868B;" >
+		<h2 style="font-family: Impact, Arial;color:#FFFFFF;padding-top:20px;">
+			Important Dates
+			</h2>
+		</div>
+		<div class="col-md-12" style="background-color:#F5F5F5;margin-bottom:15px;margin-top:15px;" >
+			<p >
+				important dates
+			</p>
+		</div>
+		<div class="col-md-12" style="background-color:#00868B;" >
+		<h2 style="font-family: Impact, Arial;color:#FFFFFF;padding-top:20px;">
+			Organzier
+			</h2>
+		</div>
+		<div class="col-md-12" style="background-color:#F5F5F5;margin-bottom:15px;margin-top:15px;" >
+			<p >
+				organzier
+			</p>
+		</div>
+		<div class="col-md-12" style="background-color:#00868B;" >
+		<h2 style="font-family: Impact, Arial;color:#FFFFFF;padding-top:20px;">
+			Official Sponsors
+			</h2>
+		</div>
+		<div class="col-md-12" style="background-color:#F5F5F5;margin-bottom:15px;margin-top:15px;" >
+			<p >
+				Official sponsors
+			</p>
+		</div>
+		<div class="col-md-12" style="background-color:#00868B;" >
+		<h2 style="font-family: Impact, Arial;color:#FFFFFF;padding-top:20px;">
+			Sponsors
+			</h2>
+		</div>
+		<div class="col-md-12" style="background-color:#F5F5F5;margin-bottom:15px;margin-top:15px;" >
+			<p >
+				Sponsors
+			</p>
+		</div>
+		
+		</div>
+		
+		<div class="col-md-1" style="color:red;"></div>
+		</div>
+		
+<!-- bottem-->
+
+
+		
+</div>
+</body>
+</html>

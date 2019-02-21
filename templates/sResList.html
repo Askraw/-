@@ -1,0 +1,32 @@
+{% extends "base2.html" %}
+
+{% block title %}首页{% endblock %}
+
+{% block page_content %}
+    <table class="table table-bordered">
+    
+    </tr><td>搜索结果</td><td>该词条还包括</td><td></td>
+  {% for i in u %}
+            <tr>
+            
+                <td>{{ i[0] }}</td><td>{{ i[1] }}</td>
+                <td>
+                
+                <div class="input-group">
+            <span class="input-group-btn">
+                      <a href="{{url_for('req2',reqWord=i[0])}}">  <button class="btn btn-default" type="button"><i class="glyphicon glyphicon-zoom-in"></i>&nbsp;详情</button></a>
+                    </span>
+            <!-- <input type="text" class="form-control" name="changeword" placeholder="{{ i }}"> -->
+            
+        </div></td>
+       
+                
+            </tr>
+            
+    {% endfor %}       
+{% if u[0][0]!=v %}<tr><td colspan="3">  <span class="input-group-btn" > 
+                   <a href="addItem"><button class="btn btn-default btn-lg" type="button" style="margin-left:5%;margin-right:40%;"><i class="glyphicon glyphicon-plus"></i>&nbsp;没有&nbsp;{{v}}&nbsp;这个词条？添加新词条</button></a> -->
+                    </span> </td></tr>{% endif %}
+    </table>
+
+{% endblock %}
